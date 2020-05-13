@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example.html</title>
+</head>
+<body>
+    <h1>산술연산 예제</h1>
+    <input type="text" id="num1" placeholder="숫자입력..."/>
+    <button onclick="plus()">+</button>
+    <input type="text" id="num2" placeholder="숫자입력..."/>
+    <span>=</span>
+    <strong id="result">0</strong>
+    <button onclick="clearAll()">clear</button>
+    <script>
+        // clear 버튼을 누르면 호출되는 함수
+        function clearAll(){
+            document.querySelector("#num1").value="";
+            document.querySelector("#num2").value="";
+            document.querySelector("#result").innerText=0;
+        }
+        // + 버튼을 누르면 호출되는 함수 
+        function plus(){
+            var a=document.querySelector("#num1").value;
+            var b=document.querySelector("#num2").value;
+            var result=parseFloat(a)+parseFloat(b);
+            document.querySelector("#result").innerText=result;
+        }
+    </script>
+</body>
+</html>
