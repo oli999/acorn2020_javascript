@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_datatype.html</title>
+</head>
+<body>
+    <h1>데이터 type  테스트중...</h1>
+    <script>
+        //1. number type 
+        //산술연산이 가능하다 
+        var num1=10;  // int (정수)
+        var num2=10.1; // float (실수)
+
+        //2. string type
+        //문자열을 다룰때 사용하는 데이터 type  이다.
+        var myName="김구라"; //sigle quotation 
+        var yourName='해골'; //double quotation
+
+        //3. boolean type
+        //참, 거짓을 나타내는 데이터 type
+        var isRun=true;
+        var isWait=false; 
+        var isGreater= 10 > 1; //비교연산의 결과로 만들어지기도 한다.
+
+        //4. plain object type
+        // 여러개의 데이터를 key 값으로 관리하고자 할때 사용한다.
+        // 순서가 중요치 않은 다양한 type 데이터를 관리할때 주로 사용
+        var mem={num:1, name:"김구라", addr:"노량진"};
+
+        //5. array type
+        // 여러개의 데이터를 index 값으로 관리하고자 할때 사용한다. 
+        // 순서가 중요한 한가지 type 을 관리 할때 주로 사용 
+        var nums=[10, 20, 30];
+        var names=["김구라", "해골", "원숭이"];
+
+        //6. function type
+        // 특정 시점에 일괄 실행할 javascript 를 모아 놓을때 사용한다.
+        var f1=function(){
+            console.log("하나");
+            console.log("두울");
+            console.log("세엣");
+        };
+
+        //7. undefined type
+        var a; //변수를 선언만 하면 undefined  가 들어 있다. 
+        var b=undefined; //undefined 예약어를 이용해서 만들기도 한다.
+    </script>
+</body>
+</html>
