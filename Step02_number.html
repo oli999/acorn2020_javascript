@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_number.html</title>
+</head>
+<body>
+    <h1>number type  테스트중...</h1>
+    <script>
+        /*
+            number type
+            -산술 연산이 가능하다
+            -세부적으로 분류하면 int 형과 float 형으로 분류할수 있다.
+        */
+        var num1=10;   //정수 (int 형)
+        var num2=10.1;  //실수 (float 형)
+
+        //산술 연산
+        var result=10+20;
+        //number type  이 들어 있는 변수명으로 연산도 가능
+        var result2=num1+10;
+        var result3=num1+num2;
+
+        var strNum="999";
+        var strNum2="1.1";
+        //문자 와 문자를 + 연산하면 연결 연산이 된다.
+        var result4=strNum+strNum2;
+        //산술 연산을 하고 싶으면 숫자로 바꿔서 연산해야 한다. 
+        var result5=parseInt(strNum)+parseFloat(strNum2);
+</script>
+</body>
+</html>
