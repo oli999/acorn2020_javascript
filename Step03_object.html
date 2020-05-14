@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_object.html</title>
+</head>
+<body>
+    <h1>plain object 테스트중...</h1>
+    <script>
+        /*
+            plain object type
+            - 객체 리터럴 { } 을 이용해서 만들수 있다.
+            - {key:value, key2:value2, ... } 와 같은 형식으로 만든다.
+            - 순서가 중요치 않는 데이터를 저장한다.
+        */
+        // object 를 만들면서 값을 바로 저장한다. 
+        var mem1={num:1, name:"김구라", addr:"노량진"};
+        // 빈 object 를 만들고 
+        var mem2={};
+        // 나중에 필요할때 값을 동적으로 저장한다. 
+        mem2.num=2;
+        mem2.name="해골";
+        mem2.addr="행신동";
+
+        // mem1 의 name  이라는 방에 저장된 값을  a 라는 이름의 변수에 담아 보세요.
+        var a=mem1.name;
+        // mem2 의 addr 이라는 방에 저장된 값을 b 라는 이름의 변수에 담아 보세요.
+        var b=mem2.addr;
+        // mem1 의 addr 이라는 방의 값을 "독산동" 으로 수정해 보세요.
+        mem1.addr = "독산동";
+        // mem1 의 addr 이라는 방에 저장된 값을 콘솔창에 출력해 보세요.
+        console.log(mem1.addr);
+    </script>
+</body>
+</html>
