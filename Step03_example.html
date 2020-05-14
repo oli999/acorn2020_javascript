@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_example.html</title>
+</head>
+<body>
+    <h1>plain object 테스트중...</h1>
+    <input type="text" id="name" placeholder="이름 입력..."/>
+    <input type="text" id="addr" placeholder="주소 입력..."/>
+    <button onclick="save()">임시 저장</button>
+    <button onclick="show()">저장된 정보 보기</button>
+    <p id="console"></p>
+    <script>
+        //빈 object 를 페이지 로딩 시점에 미리 만들어 놓는다.
+        var obj={};
+
+        //임시 저장 버튼을 눌럿을때 호출되는 함수 
+        function save(){
+
+            //입력한 이름과 주소를 읽어 와서 obj 에 저장해 보세요.
+            obj.name=document.querySelector("#name").value;
+            obj.addr=document.querySelector("#addr").value;
+        }
+
+        //저장된 정보 보기 버튼을 눌럿을때 호출되는 함수 
+        function show(){
+            document.querySelector("#console").innerText=
+                "이름은 "+obj.name+" 주소는 "+obj.addr+" 입니다.";
+        }
+    </script>
+</body>
+</html>
