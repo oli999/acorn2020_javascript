@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step06_EventListener3.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>EventListener 함수 테스트중...</h1>
+    <div class="box">div1</div>
+    <div class="box">div2</div>
+    <div class="box">div3</div>
+    <div class="box">div4</div>
+    <div class="box">div5</div>
+    <script>
+        //기본 반복문 확인
+        var nums=[10,20,30,40,50];
+        for(var i=0; i<nums.length; i++){
+            console.log(nums[i]);
+        }
+        // 클래스명이 box  인 div  의 참조값을 배열에 담아오기
+        var divs=document.querySelectorAll(".box");
+        /*
+            divs 배열안에 있는 div  의 참조값을 이용해서 
+            이벤트 등록을 해서 동작하게 해 보세요.
+        */
+        for(var i=0; i<divs.length; i++){
+            divs[i].addEventListener("click", function(){
+                this.innerText="clicked!";
+            });
+        }
+        
+        
+    </script>
+</body>
+</html>
