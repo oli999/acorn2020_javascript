@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_function2.html</title>
+</head>
+<body>
+    <h1>function type 테스트중...</h1>
+    <script>
+        keepBeer(); // 미리 만들어진 함수를 호출하기 때문에 오류가 나지 않는다.
+        //keepBeer2(); //오류가 발생한다.
+
+        //우선적으로 미리 만들어지는 함수 
+        function keepBeer(){
+            console.log("냉장고 문을 연다");
+            console.log("맥주를 넣는다");
+            console.log("냉장고 문을 닫는다.");
+        }
+        //실행순서가 와야 만들어지는 함수 
+        var keepBeer2=function(){
+            console.log("냉장고 문을 연다");
+            console.log("맥주를 넣는다");
+            console.log("냉장고 문을 닫는다.");
+        };
+    </script>
+</body>
+</html>
