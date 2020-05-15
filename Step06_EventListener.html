@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step06_EventListener.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>EventListener 함수 테스트중...</h1>
+    <div class="box" 
+        onclick="clicked()" 
+        onmouseover="mouseovered()">div1</div>
+    <div class="box" id="one">div2</div>
+    <script>
+        var clicked=function(){
+            console.log("클릭했네?");
+        };
+        function mouseovered(){
+            console.log("마우스를 올렸네?");
+        }
+        // id 가  one 인 요소에 click 이벤트가 일어 났을때 호출되는 함수 등록
+        document.querySelector("#one")
+        .addEventListener("click", function(){
+            console.log("클릭했네???");
+        });
+         // id 가  one 인 요소에 mouseover 이벤트가 일어 났을때 호출되는 함수 등록
+        document.querySelector("#one")
+        .addEventListener("mouseover", function(){
+            console.log("마우스를 올렸네???");
+        });
+    </script>
+</body>
+</html>
