@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_function5.html</title>
+</head>
+<body>
+    <h1>function type  테스트중...</h1>
+    <button onclick="test()">테스트</button>
+    <script>
+        //함수의 인자로 두수를 전달 받아서 합을 출력하는 함수 
+        var showSum=function(num1, num2){
+            var sum=num1+num2;
+            console.log("두수의 합은:"+sum);
+        };
+        //함수의 인자로 두수를 전달 받아서 두수의 합을 리턴하는 함수
+        var getSum=function(num1, num2){
+            var sum=num1+num2;
+            return sum;
+        };
+        //test 버튼을 누르면 호출되는 함수 
+        function test(){
+            showSum(10, 20);
+            var result=getSum(20, 30);
+        }
+    </script>
+</body>
+</html>
