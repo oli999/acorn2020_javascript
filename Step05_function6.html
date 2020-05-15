@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_function6.html</title>
+</head>
+<body>
+    <h1>function type  테스트중...</h1>
+    <script>
+        //아래와 같이 함수를 1회용으로 사용할수도 있다.
+        (function(){
+            console.log("함수를 만들자 마자 호출했습니다.");
+        })();
+
+        (function(msg){
+            console.log("인자로 전달 받은 msg:"+msg);
+        })("hello");
+    </script> 
+</body>
+</html>
