@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_function4.html</title>
+</head>
+<body>
+    <h1>function type 테스트중...</h1>
+    <script>
+        // plain object type 을 리턴해주는 함수 
+        var getInfo=function(){
+            var mem={num:1, name:"김구라", isMan:true};
+            return mem;
+        };
+        // array type  을 리턴해주는 함수
+        var getList=function(){
+            var friends=["김구라","해골","원숭이"];
+            return friends;
+        };
+        // plain object type 을 리턴해주는 함수 
+        var getCar=function(){
+            var car={
+                name:"소나타",
+                drive:function(){
+                    console.log("달려요");
+                }
+            };
+            return car;
+        };
+
+        var a=getCar;
+        var b=getCar();
+        var c=getCar().name;
+        var d=getCar().drive;
+        var e=getCar().drive();
+    </script>
+</body>
+</html>
