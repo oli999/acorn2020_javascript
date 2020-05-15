@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_function3.html</title>
+</head>
+<body>
+    <h1>function type  테스트중...</h1>
+    <button onclick="test()">test 함수 호출하기</button>
+    <script>
+        var f1=function(){
+            console.log("f1() 호출됨");
+        };
+        var f2=function(){
+            console.log("f2() 호출됨");
+            return 999;
+        };
+        var f3=function(){
+            console.log("f3() 호출됨");
+            var msg="안녕";
+            return msg;
+        };
+
+        var test=function(){
+            var a=f1(); //undefiend
+            var b=f2(); //999
+            var c=f3(); //"안녕"
+        };
+    </script>
+</body>
+</html>
