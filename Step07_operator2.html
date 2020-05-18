@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_operator2.html</title>
+</head>
+<body>
+    <h1>논리 연산자 테스트중...</h1>
+    <script>
+        /*
+            2. 논리(boolean) 연산자
+            - 논리값(true, false) 를 연산해주는 연산자.
+
+            && => and 연산 ("그리고" 로 읽는다)
+            || => or 연산  ("또는" 으로 읽는다)
+            !  => not 연산 ("아니면" 으로 읽는다)
+        */
+
+        var result1=false&&false; //false
+        var result2=false&&true; //false
+        var result3=true&&false; //false
+        var result4=true&&true; //true
+
+        //연산에 참여하는 boolean 값이 어느 하나만 true  면 결과는 true 이다.
+        var result5=false||false; //false
+        var result6=false||true; //true
+        var result7=true||false; //true
+        var result8=true||true; //true
+
+        //boolean 값을 반전시킨다. 
+        var result9=!true;  //false
+        var result10=!false; //true
+    </script>
+</body>
+</html>
