@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_operator4.html</title>
+</head>
+<body>
+    <h1>비교 연산자 테스트중...</h1>
+    <script>
+        /*
+            4. 비교 연산자 
+
+            == => 같은지 비교
+            != => 다른지 비교
+            >  => 큰지 비교
+            >= => 크거나 같은지 비교
+            <  => 작은지 비교
+            <= => 작거나 같은지 비교  
+
+            - 비교 연산자로 주로 하는 작업
+            1. 문자열의 내용이 같은지 다른지 비교
+            2. 숫자의 크기 비교
+            3. 숫자가 같은지 다른지 비교
+            4. 논리값이 같은지 다른지 비교
+            5. 문자열의 알파벳 순서 혹은 가나다 순서 비교 
+        */
+
+        //1. 문자열의 내용 비교 
+        var myName="김구라"
+        var isEqual= myName == "김구라"; //true
+        var isDifferent= myName != "해골"; //true
+
+        //2. 숫자의 크기 비교
+        var myNum=100;
+        var isBigger= myNum > 50; //true
+        var isSmaller= myNum < 200; //true
+
+        //3. 숫자가 같은지 다른지 비교
+        var yourNum=100;
+        var isNumEqual= yourNum == 101; //false
+        var isNumDiff= yourNum != 101;  //true
+
+        //4. 논리값 비교
+        var isRun=true;
+        var result= isRun == true; //true;
+        var result2= isRun != false; //true;
+
+        //5. 알파벳, 가나다 순서 
+        var result3= "a" < "b"; //true
+        var result4= "가" > "나"; //false
+    </script>
+</body>
+</html>
