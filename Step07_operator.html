@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_operator.html</title>
+</head>
+<body>
+    <h1>산술 연산자에 대해 알아보기</h1>
+    <script>
+        /*
+            1. 산술 연산자
+            number type data 를 연산할때 사용한다.
+            +, - ,*, /, % (나머지 연산자)
+        */
+        var result1=10+1; //11
+        var result2=10-1; //9
+        var result3=10*10; //100
+        var result4=10/2; //5
+        var result5=10%3; //1
+
+        var num1=10;
+        var num2=1;
+        //산술연산을 할때 숫자가 들어있는 변수명으로 할수도 있다.
+        var result6=num1+1;
+        var result7=num1%3;
+        var result8=num1-num2;
+
+        //object 혹은 array 에 들어 있는 데이터를 이용해서 연산을 할수도 있다. 
+        var obj={first:10, second:20};
+        var arr=[10, 20, 30];
+    
+        var result9=1+obj.first;
+        var result10=10*arr[1];  
+    </script>
+</body>
+</html>
