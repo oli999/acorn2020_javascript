@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step08_loop3.html</title>
+</head>
+<body>
+    <h1>반복문 while 테스트중...</h1>
+    <script>
+        var names=["김구라", "해골", "원숭이","주뎅이","덩어리"];
+        // while 문을 이용한 반복 수행 
+        var count=0;
+        // while(count < names.length){
+        //     console.log(names[count]);
+        //     count++;
+        // }
+
+        while(true){
+            console.log(names[count]);
+            count++; // count 1 증가 시키고 
+            //만일 count 가 존재 하지 않는 인덱스라면 
+            if(count == names.length){
+                break;//반복문 탈출 
+            }
+        }
+    </script>
+</body>
+</html>
