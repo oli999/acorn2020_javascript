@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step06_example.html</title>
+</head>
+<body>
+    <input type="text" id="inputMsg"/>
+    <button id="sendBtn">전송</button>
+    <p id="console"></p>
+    <script>
+        //버튼을 클릭했을때 실행할 함수 등록
+        document.querySelector("#sendBtn")
+        .addEventListener("click", function(){
+            //1. input 요소에 입력한 value  값 읽어오기
+            var msg=document.querySelector("#inputMsg").value;
+            //2. p  요소의 innerText 에 반영하기
+            document.querySelector("#console").innerText=msg;
+            //3. 입력창 초기화
+            document.querySelector("#inputMsg").value="";
+        });
+
+        //input 요소에 keydown 이벤트가 일어났을때 호출되는 함수 등록
+        document.querySelector("#inputMsg")
+        .addEventListener("keyup", function(event){
+            console.log(event);
+            //만일 event.key 가 "Enter" 와 같다면
+            if(event.key == "Enter"){ //조건부 수행 블럭 
+                //1. input 요소에 입력한 value  값 읽어오기
+                var msg=document.querySelector("#inputMsg").value;
+                //2. p  요소의 innerText 에 반영하기
+                document.querySelector("#console").innerText=msg;
+                //3. 입력창 초기화
+                document.querySelector("#inputMsg").value="";
+            }
+        });
+    </script>
+</body>
+</html>
