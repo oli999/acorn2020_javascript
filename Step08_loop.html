@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step08_loop.html</title>
+</head>
+<body>
+    <h1>반복문 for 테스트중...</h1>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+    <button  id="printBtn">출력</button>
+    <script>
+        var names=["김구라","해골","원숭이","주뎅이","덩어리"];
+        //출력 버튼을 누르면 배열에 있는 문자열이 순서대로 
+        //div 의 innerText 에 출력되도록 해 보세요.
+        document.querySelector("#printBtn")
+        .addEventListener("click", function(){
+            //1. names 배열에 있는 문자열을 하나씩 참조해서
+            for(var i=0; i<names.length; i++){
+                //2. 모든 div  요소에 순서대로 innerText  에 넣어주기 
+                document.querySelectorAll("div")[i].innerText=names[i];
+            }
+        });
+    </script>
+</body>
+</html>
