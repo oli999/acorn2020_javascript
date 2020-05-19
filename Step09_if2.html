@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_if2.html</title>
+</head>
+<body>
+    <h1>if 문 테스트중...</h1>
+    <p id="console"></p>
+    <script>
+        //boolean type 을 저장하는 변수는 대화식으로 이름을 지으면
+        //가독성이 좋아진다.
+        var isHungry=confirm("배고파요?");
+        if(isHungry){
+            document.querySelector("#console").innerText="간식 드세요~";
+        }else{
+            document.querySelector("#console").innerText="운동하세요~";
+        }
+    </script>
+</body>
+</html>

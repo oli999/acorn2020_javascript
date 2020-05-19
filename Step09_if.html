@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_if.html</title>
+</head>
+<body>
+    <h1>if 문 테스트중...</h1>
+    <p id="console"></p>
+    <script>
+        var isHungry=confirm("배고파요?");
+        if(isHungry){
+            document.querySelector("#console").innerText="간식 드세요~";
+        }
+        if(!isHungry){
+            document.querySelector("#console").innerText="운동하세요~";
+        }
+    </script>
+</body>
+</html>
