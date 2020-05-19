@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step08_example.html</title>
+</head>
+<body>
+    <h1>반복문 활용 예제 테스트중...</h1>
+    <input type="text" id="inputName" placeholder="검색할 이름..."/>
+    <button id="findBtn">검색</button>
+    <p id="console"></p>
+    <script>
+        //친구 정보를 담을 배열
+        var friends=[];
+        //배열에 sample  데이터 담기
+        friends.push({name:"김구라",phone:"010",email:"aaa@"});
+        friends.push({name:"김진호",phone:"011",email:"bbb@"});
+        friends.push({name:"이봉하",phone:"017",email:"ccc@"});
+        friends.push({name:"이세희",phone:"018",email:"ddd@"});
+        friends.push({name:"백운용",phone:"019",email:"eee@"});
+
+        //버튼을 눌렀을때 실행할 함수 등록
+        document.querySelector("#findBtn")
+        .addEventListener("click", function(){
+            //1. 입력한 이름을 읽어온다.
+            var inputName=document.querySelector("#inputName").value;
+            //2. 배열(friends)에서 동일한 이름을 가지고 있는 {} 을 찾는다.
+            for(var i=0; i<friends.length; i++){
+                //i번째 방의 친구정보를 불러와서 
+                var tmp=friends[i];
+                //만일 입력한 이름과 친구정보에 있는 이름과 같으면
+                //해당 정보를 p  요소에 출력하기
+                if(inputName == tmp.name){
+                    document.querySelector("#console").innerText=
+                        tmp.name+tmp.phone+tmp.email;
+                    break; //for  문도 탈출이 가능 할까?
+                }else{
+                    document.querySelector("#console").innerText=
+                        inputName+" 으로 검색된 정보는 없습니다.";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
