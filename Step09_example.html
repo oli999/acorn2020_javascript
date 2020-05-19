@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_example.html</title>
+    <style>
+        canvas{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>그림판 만들기</h1>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+        //canvas 의 참조값 얻어오기 
+        var canvas=document.querySelector("#myCanvas");
+        //canvas 에 그림을 그릴수 있는 도구의 참조값 얻어오기
+        var context=canvas.getContext("2d");
+
+        context.strokeStyle="#00ff00"; //선의 색상
+        context.lineWidth=10; //선의 굵기
+        context.lineCap="round"; //선의 끝부분을 둥글게
+        context.lineJoin="round"; //선의 교차점을 둥글게 
+
+        //sample 직선 그려보기
+        context.beginPath();  //경로 시작
+        context.moveTo(100, 100); //시작점 지정
+        context.lineTo(200, 200); //이을점1 지정
+        context.lineTo(300, 100); //이을점2 지정
+        context.stroke(); //선 그리기
+        context.closePath(); //경로 마무리
+    </script>
+</body>
+</html>

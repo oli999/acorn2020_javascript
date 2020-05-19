@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_example2.html</title>
+    <style>
+        canvas{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>그림판 만들기</h1>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <div>
+        색상<input type="color" id="selectedColor"/>
+        굵기<input type="range" id="selectedWidth"
+                min="1" max="20" step="1" value="5"/>
+        <strong id="displayWidth">5</strong>
+        <button id="clearBtn">Clear</button>
+    </div>
+    <script>
+        //canvas 의 참조값 얻어오기 
+        var canvas=document.querySelector("#myCanvas");
+        //canvas 에 그림을 그릴수 있는 도구의 참조값 얻어오기
+        var context=canvas.getContext("2d");
+
+        //현재 그림을 그리고 있는 상태인지 여부를 관리할 
+        //변수를 선언하고 초기값 부여하기
+        var isDrawing=false;
+
+        //색상과 선의 굵기 초기값 지정하기
+        var thisColor="#000000";
+        var thisWidth=5; 
+
+        //부드럽게 그려지게
+        context.lineCap="round";
+        context.lineJoin="round";
+
+        document.querySelector("#myCanvas")
+        .addEventListener("mousedown", function(event){
+            //이벤트가 일어난 좌표에서 선을 그릴 준비를 한다.
+            //console.log(event);
+            //이벤트가 일어난곳의 좌표 얻어오기
+            var x=event.offsetX;
+            var y=event.offsetY;
+            //해당 좌표에서 선을 그릴 준비를 한다.
+            context.beginPath();
+            context.strokeStyle=thisColor; //선의 색상
+            context.lineWidth=thisWidth; //선의 굵기
+            context.moveTo(x, y);
+            //그림을 그리고 있는 상태로 바꿔준다
+            isDrawing=true;
+        });
+
+        document.querySelector("#myCanvas")
+        .addEventListener("mousemove", function(event){
+            //만일 현재 그리고 있는 상태가 아니면 함수를 여기서 종료한다.
+            if(!isDrawing){
+                return; //함수종료
+            }
+            //이벤트가 일어난 좌표까지 선을 그린다.
+            var x=event.offsetX;
+            var y=event.offsetY;
+            //해당 좌표 까지 선을 이어준다. 
+            context.lineTo(x, y);
+            context.stroke();
+        });
+        document.querySelector("#myCanvas")
+        .addEventListener("mouseup", function(){
+            //더이상 선이 그려지지 않도록 한다.
+            isDrawing=false;
+            context.closePath();
+        });
+
+        //색상을 선택했을때 실행할 함수 등록
+        document.querySelector("#selectedColor")
+        .addEventListener("change", function(){
+            //선택된 색상값을 변수에 대입하기 
+            thisColor = this.value;
+        });
+
+        //굵기를 바꿀때 실행할 함수 등록
+        document.querySelector("#selectedWidth")
+        .addEventListener("input", function(){
+            //현재 value  값을 테스트로 콘솔창에 출력해 보기
+            console.log(this.value);
+            //strong  요소에 출력
+            document.querySelector("#displayWidth").innerText=this.value;
+            //현제 색상값에 대입해서 선의 굵기에 반영되도록 한다.
+            thisWidth=this.value;
+        });
+
+        document.querySelector("#clearBtn")
+        .addEventListener("click", function(){
+            // context 를 이용해서 사각형 영역 clear 하기
+            //  .clearRect(x, y, width, height)
+            context.clearRect(0, 0, 500, 500);
+        });
+    </script>
+</body>
+</html>
