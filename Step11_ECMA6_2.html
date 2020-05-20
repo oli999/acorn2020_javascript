@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA6_2.html</title>
+</head>
+<body>
+    <h1>ECMAScript6 테스트중...</h1>
+    <script>
+        // Car 클래스 정의하기
+        class Car{
+            //속성(저장소) 정의하기
+            brand="벤츠";
+            color="white";
+            //기능
+            drive(){
+                console.log(this.brand+" 가 달려요");
+            }
+        }
+        //Car 클래스로 객체를 생성해서 참조값을 car1 이라는 이름의 변수에 담기
+        let car1=new Car();
+        //Car 클래스로 객체를 생성해서 참조값을 car2 이라는 이름의 변수에 담기
+        let car2=new Car();
+
+        let car3={
+            brand:"벤츠",
+            color:"red",
+            drive:function(){
+                console.log(this.brand+" 가 달려요");
+            }
+        };
+    </script>    
+</body>
+</html>

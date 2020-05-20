@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step11_ECMA6.html</title>
+</head>
+<body>
+    <h1>ECMAScript6 테스트중...</h1>
+    <script>
+        //변수를 선언할때 let 으로 선언하면 선언된 블럭 내에서만 사용가능하다
+        for(let i=0; i<5; i++){ 
+            console.log(i);
+        }// i 는 for 문 밖에서 사용할수 없다.
+        
+        if(true){
+            let myName="김구라";
+        }// myName 은 if 문 밖에서 사용할수 없다.
+
+        //상수(수정불가한 변수)도 만들수 있다.
+        const PI=3.14159;
+        //PI=100; //오류
+
+        //let PI=3.14; //상수로 선언한 것을 다시 선언할수 없다. 
+    </script>
+</body>
+</html>
