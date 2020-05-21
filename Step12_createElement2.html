@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step12_createElement2.html</title>
+</head>
+<body>
+    <h1>createElement 테스트중...</h1>
+    <div id="wrapper">
+       
+    </div>
+    <script>
+        setInterval(function(){
+            console.log("함수가 호출되네?");
+            /*
+            <a href="hello.html" class="my-link">이동하기</a>
+            위와 같은 구조의 a 요소를 동적으로 만들기 
+            */
+            let newLink=document.createElement("a");
+            newLink.innerText="이동하기";
+            newLink.setAttribute("href", "hello.html");
+            newLink.setAttribute("class", "my-link");
+
+            //div 의 자식 요소로 추가하기
+            document.querySelector("#wrapper").append(newLink);
+        }, 1000);
+    </script>
+</body>
+</html>
