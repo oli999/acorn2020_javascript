@@ -32,7 +32,10 @@
             //5. 만든 li 요소에 click 리스너 함수 등록하기
             newLi.addEventListener("click", function(){
                 console.log("li 를 클릭했네?");
-                this.remove();
+                let isDelete=confirm("삭제 할까요?");
+                if(isDelete){
+                    this.remove();
+                }
             });
         });
     </script>
