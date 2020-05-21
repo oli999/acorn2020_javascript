@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step12_example3.html</title>
+    <style>
+        tbody tr:hover{
+            background-color: yellow;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>createElement  테스트중...</h1>
+    <input type="text" id="inputNum" placeholder="번호입력..."/>
+    <input type="text" id="inputName" placeholder="이름입력..."/>
+    <input type="text" id="inputAddr" placeholder="주소입력..."/>
+    <button id="addBtn">추가</button>
+    <h1>추가된 회원 목록 입니다.</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>주소</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <script>
+        document.querySelector("#addBtn")
+        .addEventListener("click", function(){
+            //1. 입력한 정보를 읽어와서
+            let num=document.querySelector("#inputNum").value;
+            let name=document.querySelector("#inputName").value;
+            let addr=document.querySelector("#inputAddr").value;
+            //2. td 요소 3개를 만들어서 innerText 에 출력하고
+            let td1=document.createElement("td");
+            let td2=document.createElement("td");
+            let td3=document.createElement("td");
+            td1.innerText=num;
+            td2.innerText=name;
+            td3.innerText=addr;
+            //3. tr 요소 1개를 만들어서 td 를 append 하고
+            let tr=document.createElement("tr");
+            tr.append(td1);
+            tr.append(td2);
+            tr.append(td3);
+            //4. tbody  요소에 tr 요소를 append 한다
+            document.querySelector("tbody").append(tr);
+
+            //5. tr 을 클릭했을때 실행할 함수 등록
+            tr.addEventListener("click", function(){
+                if(confirm("삭제하시겠습니까?")){
+                    this.remove();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
