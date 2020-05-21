@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step13_lotto.html</title>
+</head>
+<body>
+    <h1>lotto 추첨기 만들기</h1>
+    <p id="console"></p>
+    <script>
+        var nums=[];
+        //1. 로또 번호 6개를 랜덤하게 얻어내서 nums 배열에 저장해 보세요.
+        while(true){
+            let lottoNum=parseInt(Math.random()*45)+1;
+            //만일 중복된 값이 없을때 
+            if(nums.indexOf(lottoNum) == -1){
+                //배열에 로또 번호를 넣어준다. 
+                nums.push(lottoNum);
+            }
+            //만일 nums 에 6개의 숫자가 모두 들어갔다면 반복문 탈출
+            if(nums.length==6){
+                break;
+            }
+        }
+        //2. nums 배열에 저장된 숫자를 p 요소에 순서대로 출력해 보세요.
+        let line="";
+        for(let i=0; i<nums.length; i++){
+            line = line+nums[i]+" ";
+        }
+        document.querySelector("#console").innerText=line;
+    </script>
+</body>
+</html>
