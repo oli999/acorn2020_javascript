@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery01_hello.html</title>
+</head>
+<body>
+    <button id="changeBtn">change!</button>
+    <button id="changeBtn2">change(jQuery활용)</button>
+    <p id="one">p1</p>
+    <p id="two">p2</p>
+    <!-- 외부 javascript 로딩하기 -->
+    <script src="js/my-util.js"></script>
+    <!-- jQuery 로딩하기 -->
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        select("#changeBtn").addEventListener("click", function(){
+            select("#one").innerText="김구라";
+            select("#two").innerText="해골";
+        });
+        //jQuery 를 활용해서 버튼을 click 했을때 실행할 함수 등록 
+        $("#changeBtn2").on("click", function(){
+            //jQuery 를 활용해서 innerText 넣어주기 
+            $("#one").text("김구라");
+            $("#two").text("해골");
+        });
+    </script>
+</body>
+</html>
