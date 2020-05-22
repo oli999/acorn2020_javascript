@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery05_traverse.html</title>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li><a href="#" id="one">하나</a></li>
+            <li><a href="#" id="two">두울</a></li>
+            <li><a href="#" id="three">세엣</a></li>
+        </ul>
+    </div>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        // a 요소에 click 이벤트가 일어 났을때 호출되는 함수 등록
+        $("a").on("click", function(){
+            // 이벤트가 일어난 바로 그 요소를 선택해서 jquery  동작하기
+            $(this)
+            .text("clicked!")
+            .parent() //부모요소 
+            .css("background-color","yellow")
+            .siblings() //형제요소
+            .css("background-color","#00ff00")
+            .parent() //부모요소
+            .css("border","1px solid red")
+            .fadeOut(1000);
+        });
+    </script>   
+</body>
+</html>
