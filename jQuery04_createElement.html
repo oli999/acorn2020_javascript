@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery04_createElement.html</title>
+</head>
+<body>
+    <h1>jQuery 로 요소 동적으로 만들기 테스트중...</h1>
+    <div id="wrapper">
+
+    </div>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        var newLink=document.createElement("a");
+        newLink.innerText="hello~";
+        newLink.setAttribute("href", "hello.html");
+        document.querySelector("#wrapper").append(newLink);
+
+        //위와 같은 동작을 jQuery 로 하기 
+        $("<a>")
+        .text("hello~")
+        .attr("href","hello.html")
+        .appendTo("#wrapper");
+        
+    </script>
+</body>
+</html>
