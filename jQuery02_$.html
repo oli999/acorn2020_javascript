@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery02_$.html</title>
+</head>
+<body>
+    <div id="one">div1</div>
+    <div id="two" class="my-class">div2</div>
+    <div class="my-class">div3</div>
+    <div class="my-class">div4</div>
+    <div>div5</div>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        //모든 div  의 참조값이 들어 있는 배열 
+        // var divs=document.querySelectorAll("div");
+        // //모든 div 의 innerText 를 "김구라" 로 바꿔 주려면?
+        // for(var i=0; i<divs.length; i++){
+        //     divs[i].innerText="김구라";
+        // }
+        
+        //위와 같은 동작을 jQuery 를 이용하면 아래와 같다.
+        $("div").text("김구라");
+    </script>
+</body>
+</html>
