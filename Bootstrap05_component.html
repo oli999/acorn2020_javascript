@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap05_component.html</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Alert</h1>
+        <div class="alert alert-success">
+            작업 성공했습니다.
+        </div>
+        <div class="alert alert-danger">
+            에러가 발생했습니다.
+            <a href="#" class="alert-link">다시 시도하기</a>
+        </div>
+
+        <h1>취소 가능한 Alert</h1>
+        <div class="alert alert-warning alert-dismissible fade show">
+            <strong>주의!</strong> 컨텐츠가 삭제 됩니다.
+            <button class="close" data-dismiss="alert">&times;</button>
+        </div>
+
+        <h1>Badge text</h1>
+        <button type="button" class="btn btn-primary">
+            Notifications <span class="badge badge-danger">4</span>
+        </button>
+
+        <h1>Badge link</h1>
+        <a href="#" class="badge badge-primary">primary</a>
+        <a href="#" class="badge badge-success">success</a>
+        <a href="#" class="badge badge-warning">warning</a>
+    </div>
+    <script src="js/jquery-3.5.1.js"></script>
+    <!-- bootstrap javascript 로딩 -->
+    <script src="js/bootstrap.js"></script>
+    <script>
+        // $(".close").on("click", function(){
+        //     $(this).parent().fadeOut();
+        // });
+    </script>
+</body>
+</html>
