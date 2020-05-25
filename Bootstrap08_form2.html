@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap08_form2.html</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body>
+    <div class="container-md">
+        <h1>폼 요소의 도움말</h1>
+        <form action="">
+            <div class="form-group">
+                <label for="id">아이디</label>
+                <input type="text" class="form-control" id="id"/>
+                <span class="form-text text-muted">영문자로 시작하고 숫자를 조합해 주세요.</span>
+            </div>
+            <button type="submit" class="btn btn-outline-primary">가입</button>
+        </form>
+
+        <h1>form 검증 상태 표시</h1>
+        <form action="" class="needs-validation">
+            <div class="form-group">
+                <label for="email">이메일</label>
+                <input type="text" class="form-control is-invalid" id="email"/>
+                <div class="valid-feedback">
+                    잘 입력 했습니다.
+                </div>
+                <div class="invalid-feedback">
+                    이메일 형식에 맞게 입력 하세요.
+                </div>
+            </div>
+            <button type="submit" class="btn btn-outline-primary">가입</button>
+        </form>
+
+        <h1>form 검증 상태 표시(실제 동작)</h1>
+        <form action="" class="needs-validation" id="myForm">
+            <div class="form-group">
+                <label for="name">이름 입력</label>
+                <input type="text" class="form-control" id="name"/>
+                <div class="invalid-feedback">
+                    3글자 이상 입력하세요.
+                </div>
+            </div>
+            <button type="submit" class="btn btn-outline-primary">가입</button>
+        </form>
+    </div>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        //이름을 입력 할때 마다 호출되는 함수 등록
+        $("#name").on("input", function(){
+            //입력한 이름을 읽어온다.
+            var inputName=$(this).val();
+            //일단 모든 클래스를 삭제하고 
+            $(this).removeClass("is-valid is-invalid");
+            if(inputName.length >= 3){ // 3글자 이상 입력했을때
+                $(this).addClass("is-valid");
+            }else{ // 3글자 이상 입력하지 않았을때
+                $(this).addClass("is-invalid");
+            }
+        });
+    </script>
+</body>
+</html>

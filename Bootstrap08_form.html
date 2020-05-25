@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap08_form.html</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>form 요소</h1>
+        <form action="">
+            <div class="form-group">
+                <label for="email">이메일</label>
+                <input type="text" class="form-control" id="email"/>
+            </div>
+            <div class="form-group">
+                <label for="pwd">비밀번호</label>
+                <input type="password" class="form-control" id="pwd"/>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox"/> 아이디 저장
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">로그인</button>
+            <button type="reset" class="btn btn-warning">취소</button>
+        </form>
+        <h1>칼럼 안에 폼</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form action="">
+                    <div class="form-group">
+                        <label for="email">이메일</label>
+                        <input type="text" class="form-control" id="email"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">비밀번호</label>
+                        <input type="password" class="form-control" id="pwd"/>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox"/> 아이디 저장
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">로그인</button>
+                    <button type="reset" class="btn btn-warning">취소</button>
+                </form>                
+            </div>
+        </div>
+        <h1>form 요소를 한줄에 표시</h1>
+        <form action="">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" class="form-control" 
+                        placeholder="아이디 입력..."/>
+                </div>
+                <div class="col">
+                    <input type="password" class="form-control" 
+                        placeholder="비밀번호 입력..."/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">이메일</label>
+                <input type="text" class="form-control" id="email"/>
+            </div>
+            <button type="submit" class="btn btn-secondary">가입</button>
+        </form>
+    </div>
+</body>
+</html>
