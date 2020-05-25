@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap06_icon.html</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <!-- fontawesome 에서 제공해주는 icon 을 사용하기 위해 로딩 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+        .fa-cloud{
+            color:aquamarine;
+            font-size: 3rem;
+        }
+        .fa-coffee{
+            color:brown;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>font awesome 에서 제공해주는 아이콘 사용하기</h1>
+        <i class="fas fa-cloud"></i>
+        <i class="fas fa-coffee"></i>
+        <span class="fas fa-car"></span>
+        <span class="fas fa-bars"></span>
+        <i class="fas fa-trash-alt"></i>
+        <h1>버튼에 아이콘 표시하기</h1>
+        <button class="btn btn-danger">삭제 <i class="fas fa-trash-alt"></i></button>
+        <button class="btn btn-primary">전송 <i class="fas fa-paper-plane"></i></button>
+        <button class="btn btn-danger"><span class="sr-only">삭제</span><i class="fas fa-trash-alt"></i></button>
+    </div>
+</body>
+</html>
